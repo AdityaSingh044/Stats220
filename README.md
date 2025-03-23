@@ -29,5 +29,5 @@ A meme that captures how I currently feel about my university studies is ![](htt
 Here's a [link to the NBA website](https://www.nba.com)   
 
 
-Here is a [animated GIF]![](https://giphy.com/gifs/impastortv-tv-land-tvland-3o7TKHf8ziTDxzzVN6) 
+Here is a animated GIF ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTczbjNnNTk5d3VmcWRlbGV6cDA0NzU1d3VodDVreHFpbDQ5ZXRzbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKHf8ziTDxzzVN6/giphy.gif)  
 
