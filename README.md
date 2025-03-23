@@ -22,7 +22,7 @@ A meme that captures how I currently feel about my university studies is ![](htt
 - Dogs
 - Cats
 
-***This text is intended to be bold**
+**This text is intended to be bold**
 
 *This text is intended to be italic* 
 
