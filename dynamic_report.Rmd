@@ -3,6 +3,8 @@ title: My dynamic report
 output: html_fragment
 ---
 
+## Tracking various advertisements across Social Media Platforms. This report produces a dynamic analysis of the advertisements observed across various social media platforms with data being collected through a google form and stored in a google sheet which is linked in this report using a CSV link.
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 
@@ -11,13 +13,6 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 ```{css}
 
 ```
-
-## Tracking various advertisements across Social Media Platforms
-
-##This report produces a dynamic analysis of the advertisements observed across various social media platforms with data being collected through a google form and stored in a google sheet which is linked in this report using a CSV link.
-
-
-knitr::opts_chunk$set(echo = FALSE)
 
 
 #load package
@@ -83,6 +78,10 @@ ggplot(latest_data, aes(x = Advertisement_Topic))+
   x = "Topic of advertisement",
   y = "Count") + 
   theme_minimal()
+
+
+
+       
 
 
 
