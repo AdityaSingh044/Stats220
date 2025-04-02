@@ -1,0 +1,101 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+
+```
+
+## Tracking various advertisements across Social Media Platforms
+
+##This report produces a dynamic analysis of the advertisements observed across various social media platforms with data being collected through a google form and stored in a google sheet which is linked in this report using a CSV link.
+
+
+knitr::opts_chunk$set(echo = FALSE)
+
+
+#load package
+library(tidyverse)
+
+
+#Read CSV
+
+logged_data <-
+  read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw1jgd6Ddopt68SabX1ZwHXxscmkMmSllT-yX-tFOPew-SM81sYUXtu3N_pI9nYWTdPccM9zgipXLU/pub?output=csv") 
+  
+
+#Part D 
+
+#Renaming variables using column names from form
+
+latest_data <- logged_data %>%
+  rename(
+    Advertisement_duration = `How long was the advertisement (seconds)? Between 1 - 300 (seconds) only`,
+    Advertisement_Social_Media = `Where did you see the advertisement?`,
+    Advertisement_Topic = `What was the advertisement about?`
+  )
+
+
+#Summary Statistics for advertisement duration
+
+mean_duration <- mean(latest_data$Advertisement_duration, na.rm = TRUE)
+maximum_duration <- max(latest_data$Advertisement_duration, na.rm = TRUE)
+amount_of_advertisements <- length(latest_data$Advertisement_duration)
+
+#Output
+
+mean_duration 
+maximum_duration
+amount_of_advertisements
+
+"The average duration of advertisements was 'r round(mean_duration) seconds"
+
+"The longest duration of advertisements was 40 seconds"
+
+"There was 23 advertisements observed"
+
+
+
+#Creating bar charts 
+
+#First bar chat: Number of advertisements per platform
+
+ggplot(latest_data, aes(x= Advertisement_Social_Media)) + 
+         geom_bar() + 
+         labs(title = "Number of advertisements per platform",
+              x = "Social media platform",
+              y = "Count"
+              ) + 
+         theme_minimal()
+       
+       
+#Second bar chart: Number of advertisements sorted by topic 
+
+ggplot(latest_data, aes(x = Advertisement_Topic))+ 
+  geom_bar() + 
+  labs(title = "Number of advertisements sorted by topic",
+  x = "Topic of advertisement",
+  y = "Count") + 
+  theme_minimal()
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
